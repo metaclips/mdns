@@ -58,7 +58,6 @@ impl DNSConn {
 
         socket.set_reuse_address(true)?;
 
-        //TODO: implement set_reuse_port for windows platform
         #[cfg(target_family = "unix")]
         socket.set_reuse_port(true)?;
 
